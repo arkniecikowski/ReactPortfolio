@@ -1,56 +1,63 @@
 import React, { Component } from "react";
 import logo from "../logo.svg";
 import { Link, animateScroll as scroll } from "react-scroll";
+import * as ReactBootStrap from "react-bootstrap";
 
-export default class Navbar extends Component {
-    scrollToTop = () => {
+const Navbar = (props) => {
+    const scrollToTop = () => {
         scroll.scrollToTop();
     };
 
-    render() {
         return (
-            <nav className="nav" id="navbar">
-                <div className="nav-content">
-                    <ul className="nav-items">
-                        <li className="nav-item">
+            <ReactBootStrap.Navbar
+                className="section-main"
+                sticky="top"
+                collapseOnSelect expand="lg" bg="dark">
+                <ReactBootStrap.Navbar.Brand href="#home">AREKAREKAREK</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
+                    <ReactBootStrap.Nav className="ml-auto">
+                        <ReactBootStrap.Nav.Link >
                             <Link
-                                activeClass="active"
-                                to="section1"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                                About
+                                                activeClass="active"
+                                                to="section1"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={-70}
+                                                duration={500}
+                                            >
+                                                 About
                             </Link>
-                        </li>
-                        <li className="nav-item">
+                        </ReactBootStrap.Nav.Link>
+                        <ReactBootStrap.Nav.Link >
                             <Link
-                                activeClass="active"
-                                to="section2"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                                Projects
-                            </Link>
-                        </li>
-                        <li className="nav-item">
+                                                activeClass="active"
+                                                to="section2"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={-70}
+                                                duration={500}
+                                            >
+                                                Projects
+                             </Link>
+                        </ReactBootStrap.Nav.Link>
+                        <ReactBootStrap.Nav.Link >
                             <Link
-                                activeClass="active"
-                                to="section3"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
-                                Contact
+                                                activeClass="active"
+                                                to="section3"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={-70}
+                                                duration={500}
+                                            >
+                                                Contact
                             </Link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                        </ReactBootStrap.Nav.Link>
+
+                    </ReactBootStrap.Nav>
+                </ReactBootStrap.Navbar.Collapse>
+            </ReactBootStrap.Navbar>
         );
-    }
 }
+
+export default Navbar
