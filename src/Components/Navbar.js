@@ -53,7 +53,6 @@ const Navbar = (props) => {
                                                 Contact
                             </Link>
                         </ReactBootStrap.Nav.Link>
-
                     </ReactBootStrap.Nav>
                 </ReactBootStrap.Navbar.Collapse>
             </ReactBootStrap.Navbar>
